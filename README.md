@@ -1,9 +1,9 @@
 # GeekPi_Fan_SetUp
- 
+
 EKKOGrid: Raspberry Pi Fan Control System and Custom Retro Gaming Console
 
 
-Overview
+Overview:
 
 EKKOGrid is a Raspberry Pi-based project that integrates a custom automated fan control system to regulate CPU temperature, alongside configurations for a personalised retro gaming console. This project combines hardware, Python scripting, and Linux system configuration to deliver an optimised, real-world solution for thermal management while setting the stage for a retro gaming experience.
 
@@ -49,8 +49,6 @@ Planned Additions
 
 To further enhance the EKKOGrid system, the following features are planned:
 
-
-
 1. Error Handling:
 
 • Implement robust error handling for edge cases, such as:
@@ -61,20 +59,11 @@ To further enhance the EKKOGrid system, the following features are planned:
 
 • Example:
 
-
-
 try:  
-
     temp = get_cpu_temp()  
-
 except KeyError as e:  
-
     print(f"Error reading temperature: {e}")  
-
     # Exit or retry logic  
-
-
-
 
 
 
@@ -83,17 +72,11 @@ except KeyError as e:
 
 • Add logging to record temperature readings and fan status for debugging and analysis:
 
+• import logging  
 
+• logging.basicConfig(filename='/userdata/system/fan_control.log', level=logging.INFO)  
 
-import logging  
-
-logging.basicConfig(filename='/userdata/system/fan_control.log', level=logging.INFO)  
-
-logging.info(f"Temperature: {temp:.2f}°C, Fan Status: {'ON' if fan_status else 'OFF'}")  
-
-
-
-
+• logging.info(f"Temperature: {temp:.2f}°C, Fan Status: {'ON' if fan_status else 'OFF'}")  
 
 
 
@@ -102,7 +85,6 @@ logging.info(f"Temperature: {temp:.2f}°C, Fan Status: {'ON' if fan_status else 
 • Complete EKKOGrid’s transformation into a fully functional retro gaming console using Batocera.
 
 • Integrate a library of retro games with customisable game stats tracking, such as high scores and playtime.
-
 
 
 4. Web-Based Monitoring Dashboard:
@@ -124,29 +106,20 @@ Prerequisites:
 
 
 Steps:
-
 1. Clone the Repository:
-
 • Ensure the fan control script is placed in the /userdata/system directory.
 
 2. Make the Script Executable:
-
 • Use chmod +x /userdata/system/fan_control.py to make the script executable.
 
 3. Configure Startup:
-
 • Add the following line to /etc/rc.local:
 
 /usr/bin/python3 /userdata/system/fan_control.py &  
 
 
-
-
-
 4. Reboot and Test:
-
 • Restart the Raspberry Pi and verify the fan behaviour.
-
 
 
 Future Configurations for EKKOGrid
@@ -170,7 +143,5 @@ The EKKOGrid project showcases my ability to:
 • Solve real-world problems through scripting and testing.
 
 • Extend project functionality with planned upgrades, such as error handling, logging, and UI enhancements.
-
-
 
 This project reflects my growth as an embedded developer, combining technical skills with creativity and problem-solving.
